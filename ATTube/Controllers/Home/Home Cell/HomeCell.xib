@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="159" id="QQx-fD-6Nq" customClass="HomeCell" customModule="ATTube" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="159"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QQx-fD-6Nq" id="jOH-mD-cxv">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="158.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="XO6-u3-ei4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="158.5"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="43k-vu-df8">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                </subviews>
+                <color key="backgroundColor" red="0.039215686270000001" green="0.039215686270000001" blue="0.039215686270000001" alpha="1" colorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="XO6-u3-ei4" secondAttribute="trailing" id="23s-Af-MYb"/>
+                    <constraint firstItem="XO6-u3-ei4" firstAttribute="leading" secondItem="jOH-mD-cxv" secondAttribute="leading" id="8yJ-RM-9cG"/>
+                    <constraint firstItem="XO6-u3-ei4" firstAttribute="top" secondItem="jOH-mD-cxv" secondAttribute="top" id="C20-Gg-p7y"/>
+                    <constraint firstItem="XO6-u3-ei4" firstAttribute="height" secondItem="jOH-mD-cxv" secondAttribute="height" multiplier="144/185" constant="32.127027027027026" id="C9f-Hg-pFR"/>
+                    <constraint firstAttribute="bottom" secondItem="XO6-u3-ei4" secondAttribute="bottom" id="ROQ-kG-aLT"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="C9f-Hg-pFR"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="collectionView" destination="XO6-u3-ei4" id="OYr-WO-WTY"/>
+            </connections>
+            <point key="canvasLocation" x="214.5" y="83.5"/>
+        </tableViewCell>
+    </objects>
+</document>
