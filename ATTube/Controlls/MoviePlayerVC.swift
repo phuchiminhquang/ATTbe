@@ -105,7 +105,7 @@ class MoviePlayerVC: ViewController {
 
     // MARK: Override function
     override func configUI() {
-        let thumb = UIImage(named: "thumbSlider")?.imageWithImage(scaledToSize: CGSize(size: 14))
+        let thumb = UIImage(named: "thumbSlider")?.imageWithImage(scaledToSize: CGSize(size: 12))
         sliderTime.setThumbImage(thumb, forState: .Normal)
         addNotification()
         footerView.addBlurBackground(.Light)
@@ -126,8 +126,8 @@ class MoviePlayerVC: ViewController {
     // MARK:- Private method
     private func autoFontSize() {
         let helveticaFont = HelveticaFont()
-        beginTimeLabel.font = helveticaFont.Light(14)
-        endTimeLabel.font = helveticaFont.Light(14)
+        beginTimeLabel.font = helveticaFont.Regular(10)
+        endTimeLabel.font = helveticaFont.Bold(10)
         seperatorLabel.font = helveticaFont.Light(14)
     }
 

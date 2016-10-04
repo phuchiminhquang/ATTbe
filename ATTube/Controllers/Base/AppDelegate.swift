@@ -22,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
 
         let pageMenu = PageMenuVC.vc()
+        pageMenu.checkInt = 2
         let pageMenuNavi = UINavigationController(rootViewController: pageMenu)
         window?.rootViewController = pageMenuNavi
         window?.backgroundColor = UIColor.whiteColor()

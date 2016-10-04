@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
@@ -8,8 +9,11 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PageMenuVC" customModule="ATTube" customModuleProvider="target">
             <connections>
                 <outlet property="filterView" destination="PYj-5e-MMJ" id="j2L-W6-liL"/>
+                <outlet property="homeIconButton" destination="gKW-f9-kTm" id="XBx-B8-DSM"/>
                 <outlet property="menuBarView" destination="Bt4-6p-e4u" id="Yih-Bh-iyR"/>
+                <outlet property="playlistIconButton" destination="2s2-6a-1Jm" id="Iq0-IP-5oZ"/>
                 <outlet property="titleLabel" destination="Lyh-FW-AYT" id="WDX-oc-C8D"/>
+                <outlet property="trendingIconButton" destination="W8Z-bk-V7q" id="sMi-Xj-u6S"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -111,22 +115,49 @@
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kLH-Vx-UdI" userLabel="HomeItem">
                             <rect key="frame" x="0.0" y="0.0" width="125" height="44"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gKW-f9-kTm" userLabel="Home icon">
+                                    <rect key="frame" x="51" y="11" width="22" height="22"/>
+                                    <state key="normal" image="Home"/>
+                                    <state key="selected" image="HomeActive"/>
+                                </button>
+                            </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
+                                <constraint firstItem="gKW-f9-kTm" firstAttribute="centerY" secondItem="kLH-Vx-UdI" secondAttribute="centerY" id="Erh-Pz-pI0"/>
+                                <constraint firstItem="gKW-f9-kTm" firstAttribute="centerX" secondItem="kLH-Vx-UdI" secondAttribute="centerX" id="MVK-vg-owi"/>
                                 <constraint firstAttribute="width" secondItem="kLH-Vx-UdI" secondAttribute="height" multiplier="125:44" id="jqW-yn-OHT"/>
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WuT-49-GLk" userLabel="TrendingItem">
                             <rect key="frame" x="125" y="0.0" width="125" height="44"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W8Z-bk-V7q" userLabel="Trending icon">
+                                    <rect key="frame" x="51" y="11" width="22" height="22"/>
+                                    <state key="normal" image="Trending"/>
+                                    <state key="selected" image="TrendingActive"/>
+                                </button>
+                            </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
+                                <constraint firstItem="W8Z-bk-V7q" firstAttribute="centerY" secondItem="WuT-49-GLk" secondAttribute="centerY" id="1cH-pC-3BF"/>
                                 <constraint firstAttribute="width" secondItem="WuT-49-GLk" secondAttribute="height" multiplier="125:44" id="5cb-cr-hIy"/>
+                                <constraint firstItem="W8Z-bk-V7q" firstAttribute="centerX" secondItem="WuT-49-GLk" secondAttribute="centerX" id="s5s-zb-bFr"/>
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jmc-gy-dHc" userLabel="FavoriteItem">
                             <rect key="frame" x="250" y="0.0" width="125" height="44"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2s2-6a-1Jm" userLabel="Playlist icon">
+                                    <rect key="frame" x="51" y="11" width="22" height="22"/>
+                                    <state key="normal" image="Playlist"/>
+                                    <state key="selected" image="PlaylistActive"/>
+                                </button>
+                            </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
+                                <constraint firstItem="2s2-6a-1Jm" firstAttribute="centerY" secondItem="jmc-gy-dHc" secondAttribute="centerY" id="0pX-JL-7pP"/>
+                                <constraint firstItem="2s2-6a-1Jm" firstAttribute="centerX" secondItem="jmc-gy-dHc" secondAttribute="centerX" id="YU5-7h-n4C"/>
                                 <constraint firstAttribute="width" secondItem="jmc-gy-dHc" secondAttribute="height" multiplier="125:44" id="ghG-8F-9PX"/>
                             </constraints>
                         </view>
@@ -156,11 +187,17 @@
                 <constraint firstItem="Bt4-6p-e4u" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="nhb-p2-cU3"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-            <point key="canvasLocation" x="-634.5" y="-165.5"/>
+            <point key="canvasLocation" x="-627.5" y="-179.5"/>
         </view>
     </objects>
     <resources>
         <image name="Filter" width="22" height="22"/>
+        <image name="Home" width="22" height="22"/>
+        <image name="HomeActive" width="22" height="22"/>
+        <image name="Playlist" width="22" height="22"/>
+        <image name="PlaylistActive" width="22" height="22"/>
         <image name="Search" width="22" height="22"/>
+        <image name="Trending" width="22" height="22"/>
+        <image name="TrendingActive" width="22" height="22"/>
     </resources>
 </document>

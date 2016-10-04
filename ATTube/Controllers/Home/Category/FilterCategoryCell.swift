@@ -44,7 +44,7 @@ class FilterCategoryCell: UITableViewCell {
     }
 
     static func getCellHeight() -> CGFloat {
-        return .cellHeight
+        return .cellHeight * Ratio.widthIPhone6
     }
 
     private func autoFontSize() {

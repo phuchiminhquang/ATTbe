@@ -14,6 +14,7 @@ struct Strings {
     static let homeTitle = "HOME"
     static let trendingTitle = "TRENDING"
     static let favoriteTitle = "FAVORITE"
+    static let playlistTitle = "PLAYLISTS"
 
     static let pushPlayerVC = "pushPlayerVC"
 

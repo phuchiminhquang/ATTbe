@@ -156,7 +156,7 @@
                 <outlet property="photoImageView" destination="CSr-eh-0A2" id="McL-Kv-bdM"/>
                 <outlet property="totalViewsLabel" destination="2XY-29-SDf" id="V5W-Ye-GXU"/>
             </connections>
-            <point key="canvasLocation" x="564.5" y="241"/>
+            <point key="canvasLocation" x="602.5" y="237"/>
         </tableViewCell>
     </objects>
     <resources>

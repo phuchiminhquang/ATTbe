@@ -52,9 +52,9 @@ class PlayerCell: UITableViewCell {
 
     private func autoFontSize() {
         let helveticaFont = HelveticaFont()
-        videoNameLabel.font = helveticaFont.Regular(20)
-        descriptionLabel.font = helveticaFont.Regular(14)
-        totalViewsLabel.font = helveticaFont.Regular(14)
+        videoNameLabel.font = helveticaFont.Regular(17)
+        descriptionLabel.font = helveticaFont.Regular(13)
+        totalViewsLabel.font = helveticaFont.Regular(13)
         durationLabel.font = helveticaFont.Bold(14)
     }
 

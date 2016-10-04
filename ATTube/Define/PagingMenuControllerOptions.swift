@@ -26,9 +26,9 @@ private var pagingControllers: [UIViewController] {
     let homeVC = HomeVC.vc()
     let trendingVC = TrendingVC.vc()
     let favoriteVC = FavoriteVC.vc()
-    homeVC.title = MenuItems.Home.rawValue
-    trendingVC.title = MenuItems.Trending.rawValue
-    favoriteVC.title = MenuItems.Favorite.rawValue
+//    homeVC.title = MenuItems.Home.rawValue
+//    trendingVC.title = MenuItems.Trending.rawValue
+//    favoriteVC.title = MenuItems.Favorite.rawValue
     return [homeVC, trendingVC, favoriteVC]
 }
 
